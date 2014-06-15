@@ -13,29 +13,47 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="CommonDefine">
+      <UniqueIdentifier>{3b47410f-43c0-4ea0-9f8c-e080c817497b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plantform">
+      <UniqueIdentifier>{ae1c93ea-2da8-4d70-a93c-7f73918d25f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plantform\Header Files">
+      <UniqueIdentifier>{a15b9ae5-e1a7-4c56-8a71-a139c78b25dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Plantform\Source Files">
+      <UniqueIdentifier>{2c1e435f-d944-45ba-8112-762de993b788}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="stdafx.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="DBase.h">
+      <Filter>CommonDefine</Filter>
     </ClInclude>
-    <ClInclude Include="targetver.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="DErrorDefine.h">
+      <Filter>CommonDefine</Filter>
+    </ClInclude>
+    <ClInclude Include="DErrorNetWorkDefine.h">
+      <Filter>CommonDefine</Filter>
+    </ClInclude>
+    <ClInclude Include="DPlantform.h">
+      <Filter>CommonDefine</Filter>
+    </ClInclude>
+    <ClInclude Include="DTypeDefine.h">
+      <Filter>CommonDefine</Filter>
     </ClInclude>
     <ClInclude Include="DUtility.h">
+      <Filter>CommonDefine</Filter>
+    </ClInclude>
+    <ClInclude Include="DFile.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="stdafx.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="DUtility.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="dllmain.cpp">
+    <ClCompile Include="DFile.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
