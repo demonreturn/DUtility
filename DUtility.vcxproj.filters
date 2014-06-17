@@ -106,7 +106,10 @@
       <Filter>Plantform\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DTimeWatch.h">
-      <Filter>头文件</Filter>
+      <Filter>Time\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DLocalDateTime.h">
+      <Filter>Time\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -141,7 +144,10 @@
       <Filter>Time\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DTimeWatch.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Time\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DLocalDateTime.cpp">
+      <Filter>Time\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

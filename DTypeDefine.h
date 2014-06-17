@@ -283,4 +283,8 @@ typedef struct tagFileAttributes
 
 #define  MAX_FILENAMELEN			260
 
+typedef INT32						TIME32_S;		// 以秒为精度的时间,32位
+typedef INT64						TIME64_S;		// 以秒为精度的时间,64位
+typedef	INT64						TIME64_MS;		// 以毫秒为单位
+
 #endif	// _D_TYPE_DEFINE_H_
