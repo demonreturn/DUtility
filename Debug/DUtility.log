@@ -1,5 +1,22 @@
-﻿生成启动时间为 2014/6/15 23:37:45。
+﻿生成启动时间为 2014/6/17 12:26:35。
+     1>项目“D:\Temp\DUtility\DUtility\DUtility.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D DUTILITY_EXPORTS /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt DOSLock.cpp
+         DOSLock.cpp
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Temp\DUtility\Debug\DUtility.dll" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Temp\DUtility\Debug\DUtility.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Temp\DUtility\Debug\DUtility.lib" /MACHINE:X86 /DLL Debug\DDateTime.obj
+         Debug\DInetAddress.obj
+         Debug\DOSFile.obj
+         Debug\DOSLock.obj
+         Debug\DOSSemaphore.obj
+         Debug\DOSShareMemory.obj
+         Debug\DOSSocket.obj
+         Debug\DTimeSpan.obj
+         Debug\DTimeStamp.obj
+         Debug\DTimeZone.obj
+         DUtility.vcxproj -> D:\Temp\DUtility\Debug\DUtility.dll
+     1>已完成生成项目“D:\Temp\DUtility\DUtility\DUtility.vcxproj”(Build 个目标)的操作。
 
 生成成功。
 
-已用时间 00:00:00.04
+已用时间 00:00:02.01

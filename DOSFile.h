@@ -1,6 +1,6 @@
 
-#ifndef _D_FILE_OPERATION_H_
-#define _D_FILE_OPERATION_H_
+#ifndef _D_OS_FILE_OPERATION_H_
+#define _D_OS_FILE_OPERATION_H_
 
 #include "DBase.h"
 
@@ -127,4 +127,4 @@ namespace D_OS
 		bool bFailIfExist = true );
 }
 
-#endif	// _D_FILE_OPERATION_H_
+#endif	// _D_OS_FILE_OPERATION_H_

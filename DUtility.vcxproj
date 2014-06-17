@@ -56,6 +56,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -80,15 +81,36 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DBase.h" />
+    <ClInclude Include="DDateTime.h" />
     <ClInclude Include="DErrorDefine.h" />
     <ClInclude Include="DErrorNetWorkDefine.h" />
-    <ClInclude Include="DFile.h" />
+    <ClInclude Include="DInetAddress.h" />
+    <ClInclude Include="DOSFile.h" />
+    <ClInclude Include="DOSLock.h" />
+    <ClInclude Include="DOSMemory.h" />
+    <ClInclude Include="DOSProcess.h" />
+    <ClInclude Include="DOSSemaphore.h" />
+    <ClInclude Include="DOSShareMemory.h" />
+    <ClInclude Include="DOSSocket.h" />
+    <ClInclude Include="DOSThread.h" />
     <ClInclude Include="DPlantform.h" />
+    <ClInclude Include="DTimeSpan.h" />
+    <ClInclude Include="DTimeStamp.h" />
+    <ClInclude Include="DTimeZone.h" />
     <ClInclude Include="DTypeDefine.h" />
     <ClInclude Include="DUtility.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DFile.cpp" />
+    <ClCompile Include="DDateTime.cpp" />
+    <ClCompile Include="DInetAddress.cpp" />
+    <ClCompile Include="DOSFile.cpp" />
+    <ClCompile Include="DOSLock.cpp" />
+    <ClCompile Include="DOSSemaphore.cpp" />
+    <ClCompile Include="DOSShareMemory.cpp" />
+    <ClCompile Include="DOSSocket.cpp" />
+    <ClCompile Include="DTimeSpan.cpp" />
+    <ClCompile Include="DTimeStamp.cpp" />
+    <ClCompile Include="DTimeZone.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

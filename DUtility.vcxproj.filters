@@ -25,6 +25,24 @@
     <Filter Include="Plantform\Source Files">
       <UniqueIdentifier>{2c1e435f-d944-45ba-8112-762de993b788}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Time">
+      <UniqueIdentifier>{2af38ffd-2cdc-432b-9066-087d71760fa7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Time\Header Files">
+      <UniqueIdentifier>{6bf3d936-c02a-431c-8f9e-79d873c1b162}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Time\Source Files">
+      <UniqueIdentifier>{d11a751d-f0f6-4f4e-af3b-e8378a77be3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Net">
+      <UniqueIdentifier>{1fe47517-0c25-42a7-ad0a-3b38aaf3ace9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Net\Header Files">
+      <UniqueIdentifier>{7472ac48-b6ec-40ed-b2bc-5e21b2aa0f1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Net\Source Files">
+      <UniqueIdentifier>{96157fa6-85db-44df-9663-b09fab6fff50}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -48,13 +66,76 @@
     <ClInclude Include="DUtility.h">
       <Filter>CommonDefine</Filter>
     </ClInclude>
-    <ClInclude Include="DFile.h">
-      <Filter>头文件</Filter>
+    <ClInclude Include="DOSFile.h">
+      <Filter>Plantform\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DOSLock.h">
+      <Filter>Plantform\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DTimeStamp.h">
+      <Filter>Time\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DTimeSpan.h">
+      <Filter>Time\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DDateTime.h">
+      <Filter>Time\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DOSProcess.h">
+      <Filter>Plantform\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DOSMemory.h">
+      <Filter>Plantform\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DOSSemaphore.h">
+      <Filter>Plantform\Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DOSShareMemory.h">
+      <Filter>Plantform\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DOSThread.h">
+      <Filter>Plantform\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DInetAddress.h">
+      <Filter>Net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DOSSocket.h">
+      <Filter>Plantform\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DTimeZone.h">
+      <Filter>Time\Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DFile.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="DOSFile.cpp">
+      <Filter>Plantform\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DOSLock.cpp">
+      <Filter>Plantform\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DTimeStamp.cpp">
+      <Filter>Time\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DTimeSpan.cpp">
+      <Filter>Time\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DDateTime.cpp">
+      <Filter>Time\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DOSSemaphore.cpp">
+      <Filter>Plantform\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DOSShareMemory.cpp">
+      <Filter>Plantform\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DInetAddress.cpp">
+      <Filter>Net\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DOSSocket.cpp">
+      <Filter>Plantform\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DTimeZone.cpp">
+      <Filter>Time\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
