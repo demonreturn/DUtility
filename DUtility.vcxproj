@@ -96,6 +96,7 @@
     <ClInclude Include="DPlantform.h" />
     <ClInclude Include="DTimeSpan.h" />
     <ClInclude Include="DTimeStamp.h" />
+    <ClInclude Include="DTimeWatch.h" />
     <ClInclude Include="DTimeZone.h" />
     <ClInclude Include="DTypeDefine.h" />
     <ClInclude Include="DUtility.h" />
@@ -110,6 +111,7 @@
     <ClCompile Include="DOSSocket.cpp" />
     <ClCompile Include="DTimeSpan.cpp" />
     <ClCompile Include="DTimeStamp.cpp" />
+    <ClCompile Include="DTimeWatch.cpp" />
     <ClCompile Include="DTimeZone.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

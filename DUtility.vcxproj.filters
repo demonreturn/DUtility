@@ -87,9 +87,6 @@
     <ClInclude Include="DOSMemory.h">
       <Filter>Plantform\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DOSSemaphore.h">
-      <Filter>Plantform\Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="DOSShareMemory.h">
       <Filter>Plantform\Header Files</Filter>
     </ClInclude>
@@ -104,6 +101,12 @@
     </ClInclude>
     <ClInclude Include="DTimeZone.h">
       <Filter>Time\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DOSSemaphore.h">
+      <Filter>Plantform\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DTimeWatch.h">
+      <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -136,6 +139,9 @@
     </ClCompile>
     <ClCompile Include="DTimeZone.cpp">
       <Filter>Time\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DTimeWatch.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
