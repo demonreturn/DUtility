@@ -80,12 +80,24 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DTraceDefine.h" />
     <ClInclude Include="DBase.h" />
+    <ClInclude Include="DChannel.h" />
     <ClInclude Include="DDateTime.h" />
     <ClInclude Include="DErrorDefine.h" />
     <ClInclude Include="DErrorNetWorkDefine.h" />
+    <ClInclude Include="DFile.h" />
+    <ClInclude Include="DFileChannel.h" />
+    <ClInclude Include="DFileImplFactory.h" />
+    <ClInclude Include="DFileType.h" />
+    <ClInclude Include="DFormatter.h" />
     <ClInclude Include="DInetAddress.h" />
     <ClInclude Include="DLocalDateTime.h" />
+    <ClInclude Include="DLogFile.h" />
+    <ClInclude Include="DLogger.h" />
+    <ClInclude Include="DLogMessage.h" />
+    <ClInclude Include="DMutex.h" />
+    <ClInclude Include="DMutexGuardT.h" />
     <ClInclude Include="DOSFile.h" />
     <ClInclude Include="DOSLock.h" />
     <ClInclude Include="DOSMemory.h" />
@@ -95,26 +107,44 @@
     <ClInclude Include="DOSSocket.h" />
     <ClInclude Include="DOSThread.h" />
     <ClInclude Include="DPlantform.h" />
+    <ClInclude Include="DRegularFileImpl.h" />
+    <ClInclude Include="DShareMemory.h" />
+    <ClInclude Include="DShareVariantT.h" />
+    <ClInclude Include="DThreadMutex.h" />
     <ClInclude Include="DTimeSpan.h" />
     <ClInclude Include="DTimeStamp.h" />
     <ClInclude Include="DTimeWatch.h" />
     <ClInclude Include="DTimeZone.h" />
+    <ClInclude Include="DTraceFormater.h" />
     <ClInclude Include="DTypeDefine.h" />
     <ClInclude Include="DUtility.h" />
+    <ClInclude Include="IDFileImpl.h" />
+    <ClInclude Include="IDIOBase.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DDateTime.cpp" />
+    <ClCompile Include="DFile.cpp" />
+    <ClCompile Include="DFileChannel.cpp" />
+    <ClCompile Include="DFileImplFactory.cpp" />
     <ClCompile Include="DInetAddress.cpp" />
     <ClCompile Include="DLocalDateTime.cpp" />
+    <ClCompile Include="DLogFile.cpp" />
+    <ClCompile Include="DLogger.cpp" />
+    <ClCompile Include="DLogMessage.cpp" />
+    <ClCompile Include="DMutex.cpp" />
     <ClCompile Include="DOSFile.cpp" />
     <ClCompile Include="DOSLock.cpp" />
     <ClCompile Include="DOSSemaphore.cpp" />
     <ClCompile Include="DOSShareMemory.cpp" />
     <ClCompile Include="DOSSocket.cpp" />
+    <ClCompile Include="DRegularFileImpl.cpp" />
+    <ClCompile Include="DShareMemory.cpp" />
+    <ClCompile Include="DThreadMutex.cpp" />
     <ClCompile Include="DTimeSpan.cpp" />
     <ClCompile Include="DTimeStamp.cpp" />
     <ClCompile Include="DTimeWatch.cpp" />
     <ClCompile Include="DTimeZone.cpp" />
+    <ClCompile Include="DTraceFormater.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

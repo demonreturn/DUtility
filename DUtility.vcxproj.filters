@@ -43,6 +43,33 @@
     <Filter Include="Net\Source Files">
       <UniqueIdentifier>{96157fa6-85db-44df-9663-b09fab6fff50}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Log">
+      <UniqueIdentifier>{d3824f08-4c94-4e82-a91a-07d796da94d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CommonFunc">
+      <UniqueIdentifier>{d27528e2-6ddf-49c7-b20c-4e1f88a9ae91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Log\Header Files">
+      <UniqueIdentifier>{3c4132fa-983e-458f-beea-f1ee9e6a002e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Log\Source Files">
+      <UniqueIdentifier>{3c25555d-454b-4d28-8a91-5e8d7a57c108}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CommonFunc\Header Files">
+      <UniqueIdentifier>{d84a4124-e116-49e4-9b6d-b79344a37ba7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CommonFunc\Source Files">
+      <UniqueIdentifier>{a70c8895-466c-45c4-bf5e-b5142a140fea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File">
+      <UniqueIdentifier>{8939c6f0-8efa-4c96-8e71-d6c8042231c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File\Header Files">
+      <UniqueIdentifier>{6a606e1e-2f4f-432e-9443-9bb05e43305d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File\Source Files">
+      <UniqueIdentifier>{ec060bb9-498c-4a6f-bc7e-9648b332bded}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -111,6 +138,63 @@
     <ClInclude Include="DLocalDateTime.h">
       <Filter>Time\Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="DThreadMutex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DFile.h">
+      <Filter>File\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DFileImplFactory.h">
+      <Filter>File\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DFileType.h">
+      <Filter>File\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DRegularFileImpl.h">
+      <Filter>File\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IDFileImpl.h">
+      <Filter>File\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IDIOBase.h">
+      <Filter>File\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DLogFile.h">
+      <Filter>Log\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DMutexGuardT.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DShareVariantT.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DMutex.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DShareMemory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DLogger.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DChannel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DLogMessage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DFormatter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DTraceFormater.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DFileChannel.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DTraceDefine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DOSFile.cpp">
@@ -148,6 +232,39 @@
     </ClCompile>
     <ClCompile Include="DLocalDateTime.cpp">
       <Filter>Time\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DFile.cpp">
+      <Filter>File\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DFileImplFactory.cpp">
+      <Filter>File\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DRegularFileImpl.cpp">
+      <Filter>File\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DThreadMutex.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DLogFile.cpp">
+      <Filter>Log\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DMutex.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DShareMemory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DLogger.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DLogMessage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DTraceFormater.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DFileChannel.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
