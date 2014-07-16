@@ -50,7 +50,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;DUTILITY_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;DUTILITY_EXPORTS;D_MODULE_NAME="DUtility";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
     <Link>
@@ -80,6 +80,22 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DAutoEvent.h" />
+    <ClInclude Include="DDataStructure.h" />
+    <ClInclude Include="DEvent.h" />
+    <ClInclude Include="DEventLoopThread.h" />
+    <ClInclude Include="DEventNodeT.h" />
+    <ClInclude Include="DEventQueueStrategyT.h" />
+    <ClInclude Include="DEventQueueT.h" />
+    <ClInclude Include="DNodeList.h" />
+    <ClInclude Include="DReactor.h" />
+    <ClInclude Include="DRunable.h" />
+    <ClInclude Include="DThread.h" />
+    <ClInclude Include="DTimer.h" />
+    <ClInclude Include="DTimerNodeT.h" />
+    <ClInclude Include="DTimerQueueT.h" />
+    <ClInclude Include="DTimeValue.h" />
+    <ClInclude Include="DTrace.h" />
     <ClInclude Include="DTraceDefine.h" />
     <ClInclude Include="DBase.h" />
     <ClInclude Include="DChannel.h" />
@@ -119,10 +135,15 @@
     <ClInclude Include="DTypeDefine.h" />
     <ClInclude Include="DUtility.h" />
     <ClInclude Include="IDFileImpl.h" />
+    <ClInclude Include="IDHandleer.h" />
     <ClInclude Include="IDIOBase.h" />
+    <ClInclude Include="IDReactorImpl.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="DAutoEvent.cpp" />
     <ClCompile Include="DDateTime.cpp" />
+    <ClCompile Include="DEvent.cpp" />
+    <ClCompile Include="DEventLoopThread.cpp" />
     <ClCompile Include="DFile.cpp" />
     <ClCompile Include="DFileChannel.cpp" />
     <ClCompile Include="DFileImplFactory.cpp" />
@@ -137,11 +158,16 @@
     <ClCompile Include="DOSSemaphore.cpp" />
     <ClCompile Include="DOSShareMemory.cpp" />
     <ClCompile Include="DOSSocket.cpp" />
+    <ClCompile Include="DReactor.cpp" />
     <ClCompile Include="DRegularFileImpl.cpp" />
+    <ClCompile Include="DRunable.cpp" />
     <ClCompile Include="DShareMemory.cpp" />
+    <ClCompile Include="DThread.cpp" />
     <ClCompile Include="DThreadMutex.cpp" />
+    <ClCompile Include="DTimer.cpp" />
     <ClCompile Include="DTimeSpan.cpp" />
     <ClCompile Include="DTimeStamp.cpp" />
+    <ClCompile Include="DTimeValue.cpp" />
     <ClCompile Include="DTimeWatch.cpp" />
     <ClCompile Include="DTimeZone.cpp" />
     <ClCompile Include="DTraceFormater.cpp" />

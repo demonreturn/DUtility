@@ -4,10 +4,12 @@
 
 #include "DBase.h"
 
+#include "DTraceDefine.h"
 #include "DShareVariantT.h"
+#include "DLogMessage.h"
+#include "DTraceFormater.h"
 
 class CDChannel;
-class CDLogMessage;
 
 #include <map>
 
@@ -75,18 +77,18 @@ private:
 #define D_CHANNEL_REGISTER( channel )\
 	static CDLogger::CAutoRegister autoRegister(channel);
 
-#define D_LOG_DEFINED(source, level, data )\
+#define D_LOG_DEFINED(source, level, data )															\
 	do																								\
-{																								\
-	if ( CDLogger::Instance()->GetLoggerLevel() >= level )										\
-{																							\
-	char pszFormatBuf[D_TRACE_AVAILABLE_DATA_LEN] = {0};									\
-	CDTraceFormator traceFormator( pszFormatBuf, D_TRACE_AVAILABLE_DATA_LEN );				\
-	traceFormator << data;																	\
-	CDLogMessage msg( source, pszFormatBuf, level, __FILE__, __FUNCTION__, __LINE__ );		\
-	CDLogger::Instance()->LogMsg( msg );														\
-}																							\
-} while ( 0 );
+	{																								\
+		if ( CDLogger::Instance()->GetLoggerLevel() >= level )										\
+		{																							\
+			char pszFormatBuf[D_TRACE_AVAILABLE_DATA_LEN] = {0};									\
+			CDTraceFormator traceFormator( pszFormatBuf, D_TRACE_AVAILABLE_DATA_LEN );				\
+			traceFormator << data;																	\
+			CDLogMessage msg( source, pszFormatBuf, level, __FILE__, __FUNCTION__, __LINE__ );		\
+			CDLogger::Instance()->LogMsg( msg );														\
+		}																							\
+	} while ( 0 );
 
 #define D_LOG_FATAL_WITH_SOURCE(source, data)			D_LOG_DEFINED(source, CDLogMessage::LOG_FATAL, data)
 #define D_LOG_CRITICAL_WITH_SOURCE(source, data)		D_LOG_DEFINED(source, CDLogMessage::LOG_CRITICAL, data)

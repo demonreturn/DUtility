@@ -1,6 +1,7 @@
 
 #include "DOSLock.h"
 #include "DTimeStamp.h"
+#include "DTimeValue.h"
 
 int D_OS::DestoryMutex( DMutex* pMutex )
 {
@@ -587,17 +588,17 @@ int D_OS::TimeWaitEvent( DHANDLE* event )
 
 int D_OS::TimeWaitEvent( 
 	DHANDLE* event,
-	const CDTimeStamp& timeout )
+	const CDTimeValue& timeout )
 {
 #ifdef D_WIN32
 	DWORD ret = -1;
-	if ( 0 == timeout.GetMicroseconds() )
+	if ( 0 == timeout.GetMSecond() )
 	{
 		ret = ::WaitForSingleObject( *event, INFINITE );
 	}
 	else
 	{
-		ret = ::WaitForSingleObject( *event, timeout.GetMSSeconds() );
+		ret = ::WaitForSingleObject( *event, timeout.GetMSecond() );
 	}
 
 	switch ( ret )

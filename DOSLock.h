@@ -5,6 +5,7 @@
 #include "DBase.h"
 
 class CDTimeStamp;
+class CDTimeValue;
 
 typedef enum tag_MutexAddr
 {
@@ -106,7 +107,7 @@ namespace D_OS
 	int TimeWaitEvent( DHANDLE* event );
 
 	int TimeWaitEvent( DHANDLE* event,
-		const CDTimeStamp& timeout );
+		const CDTimeValue& timeout );
 
 	/*****************************************************************************/
 	// A set of wrappers for event end

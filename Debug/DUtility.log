@@ -1,35 +1,103 @@
-﻿生成启动时间为 2014/6/18 23:27:09。
+﻿生成启动时间为 2014/7/15 19:57:30。
      1>项目“D:\Temp\DUtility\DUtility\DUtility.vcxproj”在节点 2 上(Build 个目标)。
      1>ClCompile:
-         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D DUTILITY_EXPORTS /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt DLogger.cpp
-         DLogger.cpp
-       Link:
-         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Temp\DUtility\Debug\DUtility.dll" /INCREMENTAL /NOLOGO ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\Temp\DUtility\Debug\DUtility.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Temp\DUtility\Debug\DUtility.lib" /MACHINE:X86 /DLL Debug\DDateTime.obj
-         Debug\DFile.obj
-         Debug\DFileChannel.obj
-         Debug\DFileImplFactory.obj
-         Debug\DInetAddress.obj
-         Debug\DLocalDateTime.obj
-         Debug\DLogFile.obj
-         Debug\DLogger.obj
-         Debug\DLogMessage.obj
-         Debug\DMutex.obj
-         Debug\DOSFile.obj
-         Debug\DOSLock.obj
-         Debug\DOSSemaphore.obj
-         Debug\DOSShareMemory.obj
-         Debug\DOSSocket.obj
-         Debug\DRegularFileImpl.obj
-         Debug\DShareMemory.obj
-         Debug\DThreadMutex.obj
-         Debug\DTimeSpan.obj
-         Debug\DTimeStamp.obj
-         Debug\DTimeWatch.obj
-         Debug\DTimeZone.obj
-         Debug\DTraceFormater.obj
-         DUtility.vcxproj -> D:\Temp\DUtility\Debug\DUtility.dll
-     1>已完成生成项目“D:\Temp\DUtility\DUtility\DUtility.vcxproj”(Build 个目标)的操作。
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D DUTILITY_EXPORTS /D "D_MODULE_NAME=\"DUtility\"" /D _WINDLL /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt DEventLoopThread.cpp DLogMessage.cpp DOSLock.cpp DReactor.cpp DThread.cpp DTimeValue.cpp DTimer.cpp
+         DThread.cpp
+     1>d:\temp\dutility\dutility\dthread.h(86): error C2143: 语法错误 : 缺少“;”(在“<”的前面)
+     1>d:\temp\dutility\dutility\dthread.h(86): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>d:\temp\dutility\dutility\dthread.h(87): error C2143: 语法错误 : 缺少“;”(在“<”的前面)
+     1>d:\temp\dutility\dutility\dthread.h(87): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>d:\temp\dutility\dutility\dthread.h(110): error C2061: 语法错误: 标识符“CDTimer”
+     1>d:\temp\dutility\dutility\dthread.h(116): error C2061: 语法错误: 标识符“CDTimer”
+     1>d:\temp\dutility\dutility\dthread.h(118): error C2061: 语法错误: 标识符“CDTimerQueue”
+     1>d:\temp\dutility\dutility\dthread.h(120): error C2143: 语法错误 : 缺少“;”(在“*”的前面)
+     1>d:\temp\dutility\dutility\dthread.h(120): error C2433: “CDThreadBase::CDTimerQueue”: 不允许在数据声明中使用“virtual”
+     1>d:\temp\dutility\dutility\dthread.h(120): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>d:\temp\dutility\dutility\dthread.h(120): warning C4183: “GetTimerQueue”: 缺少返回类型；假定为返回“int”的成员函数
+     1>d:\temp\dutility\dutility\dthread.h(128): error C2061: 语法错误: 标识符“CDEventQueue”
+     1>d:\temp\dutility\dutility\dthread.h(130): error C2143: 语法错误 : 缺少“;”(在“*”的前面)
+     1>d:\temp\dutility\dutility\dthread.h(130): error C2433: “CDThreadBase::CDEventQueue”: 不允许在数据声明中使用“virtual”
+     1>d:\temp\dutility\dutility\dthread.h(130): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>d:\temp\dutility\dutility\dthread.h(130): warning C4183: “GetEventQueue”: 缺少返回类型；假定为返回“int”的成员函数
+     1>d:\temp\dutility\dutility\dthread.h(227): error C2143: 语法错误 : 缺少“;”(在“*”的前面)
+     1>d:\temp\dutility\dutility\dthread.h(227): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>d:\temp\dutility\dutility\dthread.h(230): error C2143: 语法错误 : 缺少“;”(在“*”的前面)
+     1>d:\temp\dutility\dutility\dthread.h(230): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>d:\temp\dutility\dutility\dthread.cpp(89): error C2614: “CDThreadBase”: 非法的成员初始化:“m_pEQ”不是基或成员
+     1>d:\temp\dutility\dutility\dthread.cpp(89): error C2614: “CDThreadBase”: 非法的成员初始化:“m_pTQ”不是基或成员
+     1>d:\temp\dutility\dutility\dthread.cpp(106): error C2065: “CDTimer”: 未声明的标识符
+     1>d:\temp\dutility\dutility\dthread.cpp(106): error C2065: “pTimer”: 未声明的标识符
+     1>d:\temp\dutility\dutility\dthread.cpp(107): error C2065: “pSink”: 未声明的标识符
+     1>d:\temp\dutility\dutility\dthread.cpp(107): error C2275: “IDThreadSink”: 将此类型用作表达式非法
+                 d:\temp\dutility\dutility\dthread.h(92) : 参见“IDThreadSink”的声明
+     1>d:\temp\dutility\dutility\dthread.cpp(108): error C2059: 语法错误:“const”
+     1>d:\temp\dutility\dutility\dthread.cpp(111): error C2143: 语法错误 : 缺少“;”(在“{”的前面)
+     1>d:\temp\dutility\dutility\dthread.cpp(111): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+     1>d:\temp\dutility\dutility\dthread.cpp(115): error C2065: “CDTimer”: 未声明的标识符
+     1>d:\temp\dutility\dutility\dthread.cpp(115): error C2065: “pTimer”: 未声明的标识符
+     1>d:\temp\dutility\dutility\dthread.cpp(116): error C2448: “CDThreadBase::CancleTimer”: 函数样式初始值设定项类似函数定义
+     1>d:\temp\dutility\dutility\dthread.cpp(120): error C2065: “CDTimerQueue”: 未声明的标识符
+     1>d:\temp\dutility\dutility\dthread.cpp(120): error C2065: “pTimerQueue”: 未声明的标识符
+     1>d:\temp\dutility\dutility\dthread.cpp(121): error C2448: “CDThreadBase::SetTimerQueue”: 函数样式初始值设定项类似函数定义
+     1>d:\temp\dutility\dutility\dthread.cpp(134): error C2143: 语法错误 : 缺少“;”(在“*”的前面)
+     1>d:\temp\dutility\dutility\dthread.cpp(134): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>d:\temp\dutility\dutility\dthread.cpp(135): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>d:\temp\dutility\dutility\dthread.cpp(136): error C2065: “m_pTQ”: 未声明的标识符
+     1>d:\temp\dutility\dutility\dthread.cpp(149): error C2065: “CDEventQueue”: 未声明的标识符
+     1>d:\temp\dutility\dutility\dthread.cpp(149): error C2065: “pEventQueue”: 未声明的标识符
+     1>d:\temp\dutility\dutility\dthread.cpp(150): error C2448: “CDThreadBase::SetEventQueue”: 函数样式初始值设定项类似函数定义
+     1>d:\temp\dutility\dutility\dthread.cpp(163): error C2143: 语法错误 : 缺少“;”(在“*”的前面)
+     1>d:\temp\dutility\dutility\dthread.cpp(163): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>d:\temp\dutility\dutility\dthread.cpp(164): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>d:\temp\dutility\dutility\dthread.cpp(165): error C2065: “m_pEQ”: 未声明的标识符
+         DReactor.cpp
+     1>d:\temp\dutility\dutility\idreactorimpl.h(56): error C2061: 语法错误: 标识符“CDTimerQueue”
+     1>d:\temp\dutility\dutility\idreactorimpl.h(61): error C2061: 语法错误: 标识符“CDEventQueue”
+     1>d:\temp\dutility\dutility\dreactor.h(110): error C2061: 语法错误: 标识符“CDTimerQueue”
+     1>d:\temp\dutility\dutility\dreactor.h(115): error C2061: 语法错误: 标识符“CDEventQueue”
+     1>d:\temp\dutility\dutility\dreactor.cpp(61): error C2039: “RegisterHandler”: 不是“IDReacotrImpl”的成员
+                 d:\temp\dutility\dutility\idreactorimpl.h(11) : 参见“IDReacotrImpl”的声明
+     1>d:\temp\dutility\dutility\dreactor.cpp(68): error C2039: “UnRegisterHandler”: 不是“IDReacotrImpl”的成员
+                 d:\temp\dutility\dutility\idreactorimpl.h(11) : 参见“IDReacotrImpl”的声明
+     1>d:\temp\dutility\dutility\dreactor.cpp(71): error C2065: “CDTimerQueue”: 未声明的标识符
+     1>d:\temp\dutility\dutility\dreactor.cpp(71): error C2065: “pTQ”: 未声明的标识符
+     1>d:\temp\dutility\dutility\dreactor.cpp(72): error C2448: “CDReactor::AttachTimerQueue”: 函数样式初始值设定项类似函数定义
+     1>d:\temp\dutility\dutility\dreactor.cpp(80): error C2065: “CDEventQueue”: 未声明的标识符
+     1>d:\temp\dutility\dutility\dreactor.cpp(80): error C2065: “pEQ”: 未声明的标识符
+     1>d:\temp\dutility\dutility\dreactor.cpp(81): error C2448: “CDReactor::AttachEventQueue”: 函数样式初始值设定项类似函数定义
+         DEventLoopThread.cpp
+     1>d:\temp\dutility\dutility\dthread.h(86): error C2143: 语法错误 : 缺少“;”(在“<”的前面)
+     1>d:\temp\dutility\dutility\dthread.h(86): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>d:\temp\dutility\dutility\dthread.h(87): error C2143: 语法错误 : 缺少“;”(在“<”的前面)
+     1>d:\temp\dutility\dutility\dthread.h(87): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>d:\temp\dutility\dutility\dthread.h(110): error C2061: 语法错误: 标识符“CDTimer”
+     1>d:\temp\dutility\dutility\dthread.h(116): error C2061: 语法错误: 标识符“CDTimer”
+     1>d:\temp\dutility\dutility\dthread.h(118): error C2061: 语法错误: 标识符“CDTimerQueue”
+     1>d:\temp\dutility\dutility\dthread.h(120): error C2143: 语法错误 : 缺少“;”(在“*”的前面)
+     1>d:\temp\dutility\dutility\dthread.h(120): error C2433: “CDThreadBase::CDTimerQueue”: 不允许在数据声明中使用“virtual”
+     1>d:\temp\dutility\dutility\dthread.h(120): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>d:\temp\dutility\dutility\dthread.h(120): warning C4183: “GetTimerQueue”: 缺少返回类型；假定为返回“int”的成员函数
+     1>d:\temp\dutility\dutility\dthread.h(128): error C2061: 语法错误: 标识符“CDEventQueue”
+     1>d:\temp\dutility\dutility\dthread.h(130): error C2143: 语法错误 : 缺少“;”(在“*”的前面)
+     1>d:\temp\dutility\dutility\dthread.h(130): error C2433: “CDThreadBase::CDEventQueue”: 不允许在数据声明中使用“virtual”
+     1>d:\temp\dutility\dutility\dthread.h(130): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>d:\temp\dutility\dutility\dthread.h(130): warning C4183: “GetEventQueue”: 缺少返回类型；假定为返回“int”的成员函数
+     1>d:\temp\dutility\dutility\dthread.h(227): error C2143: 语法错误 : 缺少“;”(在“*”的前面)
+     1>d:\temp\dutility\dutility\dthread.h(227): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>d:\temp\dutility\dutility\dthread.h(230): error C2143: 语法错误 : 缺少“;”(在“*”的前面)
+     1>d:\temp\dutility\dutility\dthread.h(230): error C4430: 缺少类型说明符 - 假定为 int。注意: C++ 不支持默认 int
+     1>d:\temp\dutility\dutility\deventloopthread.cpp(3): fatal error C1083: 无法打开包括文件:“DEventLoopRunnable.h”: No such file or directory
+         正在生成代码...
+         正在编译...
+         DLogMessage.cpp
+         正在生成代码...
+         正在编译...
+         DTimer.cpp
+         DTimeValue.cpp
+         DOSLock.cpp
+         正在生成代码...
+     1>已完成生成项目“D:\Temp\DUtility\DUtility\DUtility.vcxproj”(Build 个目标)的操作 - 失败。
 
-生成成功。
+生成失败。
 
-已用时间 00:00:02.11
+已用时间 00:00:09.38

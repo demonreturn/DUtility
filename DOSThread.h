@@ -4,13 +4,13 @@
 #define _D_OS_THREAD_H_
 
 #include "DBase.h"
-#include "DTimeStamp.h"
+#include "DTimeValue.h"
 
 namespace D_OS
 {
 	inline int CreateThread(
-		LPVOID pparms,
 		D_THREAD_FUNC func,
+		LPVOID pparms,
 		long flags,
 		DWORD* pthreadID,
 		DHANDLE* pthreadHandle = 0,
@@ -178,12 +178,12 @@ namespace D_OS
 #endif
 	}
 
-	inline int WaitThread( DHANDLE th, const CDTimeStamp& ts )
+	inline int WaitThread( DHANDLE th, const CDTimeValue& ts )
 	{
 #ifdef D_WIN32
 		DWORD ret;
 
-		ret = ::WaitForSingleObject( th, ts.GetMicroseconds() / 1000 );
+		ret = ::WaitForSingleObject( th, ts.GetMSecond() );
 
 		switch ( ret )
 		{

@@ -174,25 +174,79 @@
     <ClInclude Include="DShareMemory.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="DLogger.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="DChannel.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="DLogMessage.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="DFormatter.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="DTraceFormater.h">
-      <Filter>头文件</Filter>
+      <Filter>Log\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DFileChannel.h">
-      <Filter>头文件</Filter>
+      <Filter>Log\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DLogger.h">
+      <Filter>Log\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DFormatter.h">
+      <Filter>Log\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DLogMessage.h">
+      <Filter>Log\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="DTraceDefine.h">
+      <Filter>Log\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DTraceFormater.h">
+      <Filter>Log\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DTrace.h">
+      <Filter>Log\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IDHandleer.h">
+      <Filter>Net\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DReactor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="IDReactorImpl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DDataStructure.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DTimeValue.h">
+      <Filter>Time\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DTimerQueueT.h">
+      <Filter>Time</Filter>
+    </ClInclude>
+    <ClInclude Include="DTimer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DThread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DEventLoopThread.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DEvent.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DAutoEvent.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DRunable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DTimerNodeT.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DNodeList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DEventNodeT.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DEventQueueStrategyT.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DEventQueueT.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -254,16 +308,40 @@
     <ClCompile Include="DShareMemory.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="DFileChannel.cpp">
+      <Filter>Log\Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="DLogger.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Log\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DLogMessage.cpp">
-      <Filter>源文件</Filter>
+      <Filter>Log\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DTraceFormater.cpp">
+      <Filter>Log\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DReactor.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="DFileChannel.cpp">
+    <ClCompile Include="DTimeValue.cpp">
+      <Filter>Time\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DTimer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DThread.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DEventLoopThread.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DEvent.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DAutoEvent.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DRunable.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
