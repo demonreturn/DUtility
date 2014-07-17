@@ -6,7 +6,7 @@
 #include "DThread.h"
 #include "DAutoEvent.h"
 
-class CDEventLoopRunnable;
+//class CDEventLoopRunnable;
 class CDEventLoopThread : public CDThread
 {
 public:
@@ -45,7 +45,7 @@ private:
 	CDEventLoopThread( const CDEventLoopThread& );
 	void operator = ( const CDEventLoopThread& );
 
-	std::shared_ptr<CDEventLoopRunnable>	m_runnable;
+	//std::shared_ptr<CDEventLoopRunnable>	m_runnable;
 	CDAutoEvent								m_event;
 };
 

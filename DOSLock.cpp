@@ -1,7 +1,7 @@
 
 #include "DOSLock.h"
 #include "DTimeStamp.h"
-#include "DTimeValue.h"
+
 
 int D_OS::DestoryMutex( DMutex* pMutex )
 {
@@ -608,9 +608,6 @@ int D_OS::TimeWaitEvent(
 			return 0;
 		}
 	case WAIT_TIMEOUT:
-		{
-			return -1;
-		}
 	default:
 		{
 			return -1;

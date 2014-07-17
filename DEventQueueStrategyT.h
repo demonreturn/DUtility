@@ -73,7 +73,7 @@ QUEUETYPE* CDEventQueueStrategyT<QUEUETYPE>::GetEventQueue( QUEUETYPE& dQueue )
 
 	DWORD nCount = this->CalculateCurrentHandleNum( dQueue );
 
-	for (int index = 0; index < nCount; index++)
+	for (DWORD index = 0; index < nCount; index++)
 	{
 		if ( NULL == dQueue.GetFirst() )
 		{

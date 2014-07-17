@@ -2,6 +2,7 @@
 #include "DThread.h"
 #include "DOSThread.h"
 
+
 #include "DTrace.h"
 
 CDThread::CDThread()
@@ -123,7 +124,7 @@ DResult CDThreadBase::SetTimerQueue( CDTimerQueue* pTimerQueue )
 
 	if ( NULL != m_pTQ )
 	{
-		m_pTQ->Destroy();
+		m_pTQ->Destory();
 	}
 
 	m_pTQ = pTimerQueue;
@@ -152,7 +153,7 @@ DResult CDThreadBase::SetEventQueue( CDEventQueue* pEventQueue )
 	
 	if ( NULL != m_pEQ )
 	{
-		m_pEQ->Destroy();
+		m_pEQ->Destory();
 	}
 
 	m_pEQ = pEventQueue;

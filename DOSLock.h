@@ -3,9 +3,9 @@
 #define _D_LOCK_H_
 
 #include "DBase.h"
+#include "DTimeValue.h"
 
 class CDTimeStamp;
-class CDTimeValue;
 
 typedef enum tag_MutexAddr
 {

@@ -75,8 +75,7 @@ VOID CDTimeValue::Set( const FILETIME &file_time )
 #endif	// D_WIN32
 
 
-D_INLINE
-	CDTimeValue::CDTimeValue( const D_TIMEVALUE& tv )
+CDTimeValue::CDTimeValue( const D_TIMEVALUE& tv )
 {
 	this->Set( tv );
 }
@@ -86,20 +85,18 @@ CDTimeValue::CDTimeValue( const timeval& tv )
 	this->Set( tv );
 }
 
-D_INLINE
-	DWORD CDTimeValue::GetMSecond() const
+DWORD CDTimeValue::GetMSecond() const
 {
 	return ( this->m_tv.Second * 1000 + this->m_tv.USecond / 1000 );
 }
 
 // ÃëÊý
-D_INLINE DWORD CDTimeValue::GetSecond() const
+DWORD CDTimeValue::GetSecond() const
 {
 	return this->m_tv.Second;
 }
 
-D_INLINE VOID
-	CDTimeValue::SetSecond( LONGLONG second )
+VOID CDTimeValue::SetSecond( LONGLONG second )
 {
 	// 2010.11.17 edited by Î¤çæ
 	//this->m_tv.Second = (LONG)second;
@@ -107,30 +104,26 @@ D_INLINE VOID
 	Set( second );
 }
 
-D_INLINE LONG CDTimeValue::GetUSecond() const
+LONG CDTimeValue::GetUSecond() const
 {
 	return this->m_tv.USecond;
 }
 
-D_INLINE VOID
-	CDTimeValue::SetUSecond( LONG usecond )
+VOID CDTimeValue::SetUSecond( LONG usecond )
 {
 	this->m_tv.USecond = usecond;
 
 	this->BounderCheck();
 }
 
-D_INLINE VOID
-	CDTimeValue::Set( const D_TIMEVALUE &tv )
+VOID CDTimeValue::Set( const D_TIMEVALUE &tv )
 {
 	this->m_tv.Second = tv.Second;
 	this->m_tv.USecond = tv.USecond;
 
-	// 2010.11.17 edited by Î¤çæ
 	this->BounderCheck();
 }
 
-// 2010.11.17 added by Î¤çæ
 void CDTimeValue::Set( const timeval& tv )
 {
 	m_tv.Second = tv.tv_sec;
@@ -144,7 +137,6 @@ D_INLINE VOID
 	LONGLONG second, 
 	LONG usecond )
 {
-	// 2010.11.17 edited by Î¤çæ
 	//this->m_tv.Second = (LONG)second;
 	//this->m_tv.USecond = usecond;
 	long lTmp = (long)second;

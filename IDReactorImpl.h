@@ -4,6 +4,7 @@
 #define _I_D_REACTORIMPL_H_
 
 #include "DBase.h"
+#include "DThread.h"
 
 class IDHandler;
 

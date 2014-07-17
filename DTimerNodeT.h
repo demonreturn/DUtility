@@ -24,7 +24,7 @@ public:
 		TYPE pType,
 		INT64 timeTick,
 		INT64 timeTickInterval,
-		INT64 runtimes = -1 );
+		int runtimes = -1 );
 
 	INT64 GetTimeTick();
 
@@ -69,7 +69,7 @@ private:
 template< class TIMETYPE, class TYPE >
 BOOL CDTimeNodeT<TIMETYPE, TYPE>::operator>=( const CDTimeNodeT<TIMETYPE,TYPE>& right ) const
 {
-	return m_timeTick >= right.m_timeTick;_
+	return m_timeTick >= right.m_timeTick;
 }
 
 template< class TIMETYPE, class TYPE >
@@ -93,13 +93,13 @@ BOOL CDTimeNodeT<TIMETYPE, TYPE>::operator<( const CDTimeNodeT<TIMETYPE,TYPE>& r
 template< class TIMETYPE, class TYPE >
 TIMETYPE CDTimeNodeT<TIMETYPE, TYPE>::GetTimerType()
 {
-	return m_pType;
+	return m_pTimeType;
 }
 
 template< class TIMETYPE, class TYPE >
 int CDTimeNodeT<TIMETYPE, TYPE>::DecreaseRunTimes()
 {
-	D_LOG_CRITICAL( -2 < m_runtimes );		// 使用错误
+	D_ASSERT( -2 < m_runtimes );		// 使用错误
 
 	if ( 0 == m_runtimes || m_runtimes == -1 )
 	{
@@ -135,7 +135,7 @@ DResult CDTimeNodeT<TIMETYPE, TYPE>::SetTimerNode(
 	TYPE pType,
 	INT64 timeTick,
 	INT64 timeTickInterval,
-	INT64 runtimes /*= -1 */ )
+	int runtimes /*= -1 */ )
 {
 	D_CHECK_EX( NULL != pType && NULL != pTimeType, "pTimeType or pType is null", D_ERROR_NULL_POINTER );
 

@@ -1,16 +1,15 @@
 
 #include "DEventLoopThread.h"
-#include "DEventLoopRunnable.h"
 #include "DTimeValue.h"
 
 CDEventLoopThread::CDEventLoopThread()
-	: m_runnable( new CDEventLoopRunnable() )
+	//: m_runnable( new CDEventLoopRunnable() )
 {
 }
 
 CDEventLoopThread::~CDEventLoopThread()
 {
-	m_runnable = NULL;
+	//m_runnable = NULL;
 }
 
 bool CDEventLoopThread::Start()
@@ -29,7 +28,7 @@ bool CDEventLoopThread::Start()
 
 void CDEventLoopThread::Stop()
 {
-	m_runnable->Stop();
+	//m_runnable->Stop();
 
 	CDThread::Join();
 }
@@ -38,10 +37,12 @@ void CDEventLoopThread::Run()
 {
 	m_event.Signal();
 
-	m_runnable->Run();
+	//m_runnable->Run();
 }
 
 DResult CDEventLoopThread::Invoker( const EventCallBack& cb )
 {
-	cde
+	//cde
+
+	return D_OK;
 }

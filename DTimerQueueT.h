@@ -6,13 +6,16 @@
 #include "DDataStructure.h"
 #include "DTimerNodeT.h"
 #include "DMutexGuardT.h"
+#include "DTimeWatch.h"
 
 #include "DTrace.h"
 
 const DWORD TIME_TICK_MIN = 50; // 毫秒，最小定时时间
 const DWORD TIME_TICK_MAX = 4294967; // 秒，最大定时上线
 
-interface IDTimerSink
+class CDTimer;
+
+class IDTimerSink
 {
 public:
 	virtual ~IDTimerSink() {}
@@ -55,7 +58,7 @@ public:
 private:
 	virtual ~CDTimerQueueT();
 
-	CDTimerQueueT<TIMERTYPE, TYPE> AllocNode();
+	CDTimeNodeT<TIMERTYPE, TYPE>* AllocNode();
 
 	DResult SetTimerNode( 
 		TIMERNODE pTimerNode,
@@ -132,7 +135,7 @@ DResult CDTimerQueueT<TIMERTYPE, TYPE, LOCK>::Schedule( TIMERNODE pTimerNode )
 template< class TIMERTYPE, class TYPE, class LOCK>
 void CDTimerQueueT<TIMERTYPE, TYPE, LOCK>::FreeNode( CDTimeNodeT<TIMERTYPE, TYPE>*& pTimerNode )
 {
-	D_LOG_CRITICAL( NULL != pTimerNode );
+	D_ASSERT( NULL != pTimerNode );
 
 	pTimerNode->OnDestory();
 
@@ -195,7 +198,7 @@ DResult CDTimerQueueT<TIMERTYPE, TYPE, LOCK>::SetTimerNode(
 
 	dRet = pTimerNode->SetTimerNode(
 		pTimerType,
-		pTimerType,
+		pType,
 		delay.GetMSecond(),
 		intervalTickCount,
 		runtimes );
@@ -204,11 +207,11 @@ DResult CDTimerQueueT<TIMERTYPE, TYPE, LOCK>::SetTimerNode(
 }
 
 template< class TIMERTYPE, class TYPE, class LOCK>
-CDTimerQueueT<TIMERTYPE, TYPE> CDTimerQueueT<TIMERTYPE, TYPE, LOCK>::AllocNode()
+CDTimeNodeT<TIMERTYPE, TYPE>* CDTimerQueueT<TIMERTYPE, TYPE, LOCK>::AllocNode()
 {
 	CDTimeNodeT<TIMERTYPE, TYPE>* pTimerNode = new CDTimeNodeT<TIMERTYPE, TYPE>();
 
-	D_LOG_CRITICAL( NULL != pTimerNode );
+	D_ASSERT( NULL != pTimerNode );
 
 	return pTimerNode;
 }
@@ -359,16 +362,17 @@ DResult CDTimerQueueT<TIMERTYPE, TYPE, LOCK>::Cancle( TIMERTYPE pTimerType )
 
 	CDMutexGuardT<LOCK> guard( &m_lock );
 
-	var nodelist = m_nodeList.GetList();
-	CDTimeNodeT<TIMERNODE, TYPE>* pTimerNode = NULL;
+	typename std::list< CDTimeNodeT<TIMERTYPE, TYPE>* >& nodelist= m_nodeList.GetList();
+	CDTimeNodeT<TIMERTYPE, TYPE>* pTimerNode = NULL;
 
 	BOOL bFound = FALSE;
 
-	for ( var itorbegin = nodelist.begin(); itorbegin != nodelist.end(); )
+	typename std::list< CDTimeNodeT<TIMERTYPE, TYPE>* >::iterator itorbegin;
+	for ( itorbegin = nodelist.begin(); itorbegin != nodelist.end(); )
 	{
 		pTimerNode = (*itorbegin);
 
-		if ( pTimerNode == pTimerType->GetTimerType() )
+		if ( pTimerType == pTimerNode->GetTimerType() )
 		{
 			bFound = TRUE;
 			break;
@@ -410,11 +414,11 @@ DResult CDTimerQueueT<TIMERTYPE, TYPE, LOCK>::Schedule( TIMERTYPE pTimerType, TY
 
 	this->Cancle( pTimerType );
 
-	TIMERNODE pTimerNode = this->AllocNode();
+	CDTimeNodeT<TIMERTYPE, TYPE>* pTimerNode = this->AllocNode();
 
 	D_CHECK_EX( NULL != pTimerNode, "", return D_ERROR_NULL_POINTER );
 
-	dRet = this->Schedule(
+	dRet = this->SetTimerNode(
 		pTimerNode,
 		pTimerType,
 		pType,

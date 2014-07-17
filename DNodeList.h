@@ -69,8 +69,8 @@ void CDNodeListT<NODETYPE>::DestoryList()
 		return;
 	}
 
-	var itorbegin = m_list.begin();
-	var itorend = m_list.end();
+	std::list<NODETYPE>::iterator itorbegin = m_list.begin();
+	std::list<NODETYPE>::iterator itorend = m_list.end();
 
 	NODETYPE pNodeType = NULL;
 
@@ -78,7 +78,7 @@ void CDNodeListT<NODETYPE>::DestoryList()
 	{
 		pNodeType = (*itorbegin);
 
-		pNodeType->OnDestroy();
+		pNodeType->OnDestory();
 
 		pNodeType = NULL;
 
@@ -122,7 +122,7 @@ NODETYPE CDNodeListT<NODETYPE>::GetFirst()
 
 	NODETYPE pNode = *m_list.begin();
 
-	D_LOG_CRITICAL( NULL != pNode );
+	D_ASSERT( NULL != pNode );
 
 	return pNode;
 }
@@ -150,7 +150,7 @@ DResult CDNodeListT<NODETYPE>::Remove( NODETYPE pType )
 template< class NODETYPE>
 DResult CDNodeListT<NODETYPE>::Add( NODETYPE pType )
 {
-	D_LOG_CRITICAL( NULL != pType );
+	D_ASSERT( NULL != pType );
 
 	m_list.push_back( pType );
 

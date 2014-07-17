@@ -58,14 +58,14 @@ DResult CDReactor::RegisterHandler(
 {
 	D_CHECK_EX( NULL != m_pReactorImpl, "m_pReactorImpl is null", return D_ERROR_FAILURE );
 
-	return m_pReactorImpl->RegisterHandler( pHandler, nEvent, pIndex );
+	return m_pReactorImpl->RegisterHandle( pHandler, nEvent, pIndex );
 }
 
 DResult CDReactor::UnRegisterHandler( IDHandler* pHandler,int nEvent,int* pIndex )
 {
 	D_CHECK_EX( NULL != m_pReactorImpl, "m_pReactorImpl is null", return D_ERROR_FAILURE );
 
-	return m_pReactorImpl->UnRegisterHandler( pHandler, nEvent, pIndex );
+	return m_pReactorImpl->UnRegisterHandle( pHandler, nEvent, pIndex );
 }
 
 DResult CDReactor::AttachTimerQueue( CDTimerQueue* pTQ )
@@ -81,7 +81,7 @@ DResult CDReactor::AttachEventQueue( CDEventQueue* pEQ )
 {
 	D_CHECK_EX( NULL != m_pReactorImpl, "m_pReactorImpl is null", return D_ERROR_FAILURE );
 
-	m_pReactorImpl->AttachEventQueue( pTQ );
+	m_pReactorImpl->AttachEventQueue( pEQ );
 
 	return D_OK;
 }

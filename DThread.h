@@ -4,6 +4,7 @@
 #include "DBase.h"
 #include "DDataStructure.h"
 
+#include "DTimeValue.h"
 #include "DThreadMutex.h"
 
 #include <functional>
@@ -81,6 +82,11 @@ enum THREAD_CREATE_TYPE
 	THREAD_USER_TYPE,
 	THREAD_NET_TYPE
 };
+
+#include "DEventQueueT.h"
+#include "DTimerQueueT.h"
+#include "DTimer.h"
+#include "DThreadMutex.h"
 
 // 定义队列
 typedef CDTimerQueueT<CDTimer*, IDTimerSink*, CDThreadMutex> CDTimerQueue;

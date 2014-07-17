@@ -90,12 +90,12 @@ private:
 	POSTSEND_TYPE				m_ps;
 
 	// 自动事件，这个事件是用来在SendEvent等待结束用，同步
-	CDSyncAutoEvent				m_pSyncAutoEvent;
+	CDSyncAutoEvent*			m_pSyncAutoEvent;
 
 	// 用了保存OnEvent执行的结果，由于在SendData时，需要依赖OnEvent的返回值
 	// 来表示数据发送是否成功，当前此值只用作此用途。此值在同步结果设置时，
 	// 用来判断设置同步以后的结果为0-成功，非零-失败
-	int								m_EventRetValue; 
+	int							m_EventRetValue; 
 };
 
 template< class TYPE>
